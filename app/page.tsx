@@ -1,9 +1,8 @@
-export default async function Page() {
-  const res = await fetch("http://192.168.1.167:80", {
-    cache: "no-store",
-  });
-
-  const html = await res.text();
-
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+export default function Page() {
+  return (
+    <iframe
+      src="http://192.168.1.167:80"
+      style={{ width: "100%", height: "100vh", border: "none" }}
+    />
+  );
 }
